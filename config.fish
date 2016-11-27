@@ -16,6 +16,7 @@ end
 
 source_script $FISHHOME/00-env.fish
 source_script $FISHHOME/20-local.fish
+source_script $FISHHOME/80-credentials.fish
 
 add_paths \
   /usr/local/share/npm/bin \
