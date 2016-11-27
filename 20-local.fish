@@ -116,7 +116,7 @@ function sss
   end
 
   if test -d $DIR
-    echo "Go to \"$DIR\""
+    echo "Entering \"$DIR\""
     cd "$DIR"
   else
     echo "\"$DIR\" doesn't exist"
