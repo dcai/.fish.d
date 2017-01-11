@@ -38,4 +38,4 @@ if type --quiet "ruby"
 end
 
 source_script $FISHHOME/learnosity.fish;
-source_script $FISHHOME/iterm2;
+source_script $FISHHOME/iterm2.fish;
