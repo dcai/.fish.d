@@ -27,6 +27,8 @@ add_paths \
   ~/.npm-packages/bin \
   ~/.composer/vendor/bin \
   ~/Library/Python/3.5/bin \
+  "$GOPATH/bin" \
+  ~/.phpenv/bin \
   ~/Library/Python/2.7/bin
 
 if type --quiet "brew"

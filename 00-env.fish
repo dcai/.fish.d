@@ -5,6 +5,7 @@ set -gx HTTPROOT "$HOME/src"
 set -gx TIME_STYLE long-iso
 set -gx PAGER less
 set -gx fish_prompt_pwd_dir_length 3
+set -gx GOPATH "$HOME/go"
 
 # fish git prompt
 set -gx __fish_git_prompt_showdirtystate 'yes'
