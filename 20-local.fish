@@ -123,3 +123,17 @@ function sss
     echo "\"$DIR\" doesn't exist"
   end
 end
+
+function c
+  set url 'https://www.google.com/complete/search?client=hp&hl=en&xhr=t'
+  curl -H 'user-agent: Mozilla/5.0' -sSG --data-urlencode "q=$argv" "$url" \
+    | jq -r .[1][][0] \
+    | gsed 's#</\?b>#\*#g'
+end
+
+
+function mvn-java-app
+  mvn archetype:generate -DgroupId=org.dongsheng -DartifactId=$argv[1] \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false
+end

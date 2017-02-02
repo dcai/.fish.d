@@ -1,4 +1,5 @@
 set -x FISHHOME "$HOME/.config/fish"
+#set -U fish_path "$HOME/.local/var/fisherman"
 
 function source_script
   test -f $argv[1]; and source $argv[1]
