@@ -13,7 +13,7 @@ end
 if type --quiet "gsed"
   set OSX_SED "/usr/local/bin/gsed"
 else
-  set OSX_SED "/usr/bin/sed"
+  set OSX_SED "sed"
 end
 
 alias clj 'lein repl'
