@@ -46,6 +46,7 @@ alias ec 'emacsclient -t'
 alias ls="$OSX_LS -hF"
 alias ll="$OSX_LS -lhGp"
 alias sed="$OSX_SED"
+alias tree="tree -N"
 # -A list all but not . and ..
 # -l long format
 # -h human readable
