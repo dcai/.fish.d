@@ -32,6 +32,8 @@ alias ag "ag -U --noheading --ignore-dir 'vendor' --ignore-dir 'node_modules' --
 alias iftop "iftop -P -N -b -B"
 alias netstat "netstat -ln -f inet"
 alias pdate 'date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
+alias fish-iterm2-integration-update \
+  "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/iterm2.fish"
 
 # php
 alias phpcbf-psr2 'phpcbf --standard=PSR2'
