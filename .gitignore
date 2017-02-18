@@ -1,2 +1,8 @@
 fishd.*
 fish_history.*
+functions/*
+!functions/fish_prompt.fish
+
+completions/*
+!completions/fisher.fish
+!completions/tmuxinator.fish
