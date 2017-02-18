@@ -1,3 +1,4 @@
+echo 'askdfjasdkf'
 function __fish_tmuxinator_using_command
   set cmd (commandline -opc)
   if [ (count $cmd) -gt 1 ]
