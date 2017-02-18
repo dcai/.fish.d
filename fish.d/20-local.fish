@@ -1,19 +1,19 @@
 if type --quiet "gdate"
-  set OSX_DATE "/usr/local/bin/gdate"
+  set BINDATE "/usr/local/bin/gdate"
 else
-  set OSX_DATE "/bin/date"
+  set BINDATE "/bin/date"
 end
 
 if type --quiet "gls"
-  set OSX_LS "/usr/local/bin/gls --color --time-style long-iso"
+  set BINLS "/usr/local/bin/gls --color --time-style long-iso"
 else
-  set OSX_LS "/bin/ls"
+  set BINLS "/bin/ls"
 end
 
 if type --quiet "gsed"
-  set OSX_SED "/usr/local/bin/gsed"
+  set BINSED "/usr/local/bin/gsed"
 else
-  set OSX_SED "sed"
+  set BINSED "sed"
 end
 
 alias clj 'lein repl'
@@ -36,25 +36,26 @@ alias fish-iterm2-integration-update \
   "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/iterm2.fish"
 
 # php
+alias php56 '/usr/bin/php'
 alias phpcbf-psr2 'phpcbf --standard=PSR2'
-alias phpcbf-moodle 'phpcbf --standard=/var/www/moodle/local/codechecker/moodle'
+alias phpcbf-moodle 'phpcbf --standard=~/src/moodle/local/codechecker/moodle'
 alias phpcs-psr2 'phpcs --standard=PSR2'
-alias phpcs-moodle 'phpcs --standard=/var/www/moodle/local/codechecker/moodle'
+alias phpcs-moodle 'phpcs --standard=~/src/moodle/local/codechecker/moodle'
 
 # emacs
 alias emacs "emacs -nw"
 alias ec 'emacsclient -t'
 
-alias ls="$OSX_LS -hF"
-alias ll="$OSX_LS -lhGp"
-alias sed="$OSX_SED"
+alias ls="$BINLS -hF"
+alias ll="$BINLS -lhGp"
+alias sed="$BINSED"
 alias tree="tree -N"
 # -A list all but not . and ..
 # -l long format
 # -h human readable
 # -G no group name
 # -p append "/" to directories
-alias lll="$OSX_LS -lhGpA"
+alias lll="$BINLS -lhGpA"
 # Navigation
 function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end

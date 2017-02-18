@@ -1,4 +1,4 @@
-set -gx SHELL /usr/local/bin/fish
+set -gx SHELL (which fish)
 set -gx EDITOR vim
 set -gx LC_ALL en_US.UTF-8
 set -gx HTTPROOT "$HOME/src"
