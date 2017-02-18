@@ -24,7 +24,16 @@ function add_paths --description 'Add a list of paths to $PATH'
   end
 end
 
-source_script $FISHHOME/iterm2.fish;
+switch (uname)
+	case Linux
+		source_script $FISHHOME/fish.d/linux.fish;
+	case Darwin
+		source_script $FISHHOME/fish.d/macos.fish;
+		source_script $FISHHOME/fish.d/iterm2.fish;
+	#case FreeBSD NetBSD DragonFly
+	#case '*'
+end
+
 source_script $FISHHOME/00-env.fish
 source_script $FISHHOME/20-local.fish
 source_script $FISHHOME/80-credentials.fish
@@ -37,7 +46,6 @@ add_paths \
   ~/Dropbox/bin \
   ~/.cabal/bin \
   ~/.fzf/bin \
-  ~/.linuxbrew/bin \
   ~/.npm-packages/bin \
   ~/.composer/vendor/bin \
   ~/Library/Python/2.7/bin \
