@@ -5,8 +5,17 @@ function source_script
 end
 
 function add_one_path --description 'Add a directory to $PATH'
-  #test -d $argv[1]; and set PATH $argv[1] $PATH
-  test -d $argv[1]; and set -U fish_user_paths $argv[1] $fish_user_paths
+  set -l added 0
+  for path in $PATH;
+    if test $path = $argv[1]
+      set -l added 1
+    end
+  end;
+  # only add $argv[1] when it's not yet in $PATH
+  if test 0 -eq $added
+    test -d $argv[1]; and set PATH $argv[1] $PATH
+    #test -d $argv[1]; and set fish_user_paths $argv[1] $fish_user_paths
+  end;
 end
 
 function add_paths --description 'Add a list of paths to $PATH'
@@ -27,17 +36,20 @@ add_paths \
   /usr/local/bin \
   ~/Dropbox/bin \
   ~/.cabal/bin \
+  ~/.fzf/bin \
+  ~/.linuxbrew/bin \
   ~/.npm-packages/bin \
   ~/.composer/vendor/bin \
-  ~/.phpenv/bin \
-  ~/Library/Python/3.5/bin \
   ~/Library/Python/2.7/bin \
+  ~/Library/Python/3.5/bin \
+  ~/Library/Python/3.6/bin \
   "$GOPATH/bin"
 
-if type --quiet "brew"
-  add_one_path ""(brew --prefix)"/bin"
-end
+#if type --quiet "brew"
+  #add_one_path (brew --prefix)"/bin"
+#end
 
 if type --quiet "ruby"
-  add_one_path ""(ruby -rubygems -e 'puts Gem.user_dir')"/bin"
+  set -l RUBYGEMHOME (ruby -rubygems -e 'puts Gem.user_dir')
+  add_one_path "$RUBYGEMHOME/bin"
 end
