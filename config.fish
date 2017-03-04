@@ -44,6 +44,7 @@ add_paths \
   /usr/local/sbin \
   /usr/local/bin \
   ~/Dropbox/bin \
+  ~/.local/bin \
   ~/.cabal/bin \
   ~/.fzf/bin \
   ~/.npm-packages/bin \
