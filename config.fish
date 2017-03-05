@@ -34,10 +34,10 @@ switch (uname)
 	#case '*'
 end
 
-source_script $FISHHOME/00-env.fish
-source_script $FISHHOME/20-local.fish
-source_script $FISHHOME/80-credentials.fish
-source_script $FISHHOME/learnosity.fish;
+source_script $FISHHOME/fish.d/00-env.fish
+source_script $FISHHOME/fish.d/20-local.fish
+source_script $FISHHOME/fish.d/80-credentials.fish
+source_script $FISHHOME/fish.d/learnosity.fish;
 
 add_paths \
   /usr/local/share/npm/bin \
