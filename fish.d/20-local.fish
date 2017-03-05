@@ -16,46 +16,46 @@ else
   set BINSED "sed"
 end
 
-alias clj 'lein repl'
-alias vim_upgrade 'vim +PlugUpdate +qall'
-alias wget "aria2c"
-alias dl "aria2c"
-alias json-pretty-print 'python -mjson.tool | pygmentize -l javascript'
-alias mv "mv -i"
-alias cp "cp -r"
-alias df 'df -H'
-alias du 'du -sh'
-alias diff 'colordiff -u'
-alias grep 'grep --color'
-alias free 'free -h'
-alias ag "ag -U --noheading --ignore-dir 'vendor' --ignore-dir 'node_modules' --ignore 'bundle.js'"
-alias iftop "iftop -P -N -b -B"
-alias netstat "netstat -ln -f inet"
-alias pdate 'date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
-alias fish-iterm2-integration-update \
-  "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/iterm2.fish"
-
-# php
-alias php56 '/usr/bin/php'
-alias phpcbf-psr2 'phpcbf --standard=PSR2'
-alias phpcbf-moodle 'phpcbf --standard=~/src/moodle/local/codechecker/moodle'
-alias phpcs-psr2 'phpcs --standard=PSR2'
-alias phpcs-moodle 'phpcs --standard=~/src/moodle/local/codechecker/moodle'
-
-# emacs
-alias emacs "emacs -nw"
-alias ec 'emacsclient -t'
-
 alias ls="$BINLS -hF"
-alias ll="$BINLS -lhGp"
-alias sed="$BINSED"
-alias tree="tree -N"
 # -A list all but not . and ..
 # -l long format
 # -h human readable
 # -G no group name
 # -p append "/" to directories
+alias ll="$BINLS -lhGp"
 alias lll="$BINLS -lhGpA"
+alias sed="$BINSED"
+alias tree="tree -C -N"
+alias df="df -h"
+alias du='du -sh'
+alias vim_upgrade='vim +PlugUpdate +qall'
+alias wget="aria2c"
+alias dl="aria2c"
+alias json-pretty-print='python -mjson.tool | pygmentize -l javascript'
+alias mv="mv -i"
+alias cp="cp -r"
+alias diff='colordiff -u'
+alias grep='grep --color'
+alias free='free -h'
+alias iftop="iftop -P -N -b -B"
+alias netstat="netstat -ln -f inet"
+alias pdate='date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
+alias clj='lein repl'
+alias fish-iterm2-integration-update \
+  "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/iterm2.fish"
+
+
+# php
+alias php56='/usr/bin/php'
+alias phpcbf-psr2='phpcbf --standard=PSR2'
+alias phpcbf-moodle='phpcbf --standard=~/src/moodle/local/codechecker/moodle'
+alias phpcs-psr2='phpcs --standard=PSR2'
+alias phpcs-moodle='phpcs --standard=~/src/moodle/local/codechecker/moodle'
+
+# emacs
+alias emacs="emacs -nw"
+alias ec='emacsclient -t'
+
 # Navigation
 function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
@@ -66,23 +66,31 @@ function ld     ; tree --dirsfirst -aFCNL 1 $argv ; end
 function lld    ; tree --dirsfirst -ChFupDaLg 1 $argv ; end
 
 # Utilities
-function a        ; command ag --ignore=.git --ignore=log --ignore=tags --ignore=tmp --ignore=vendor --ignore=spec/vcr $argv ; end
-function c        ; pygmentize -O style=monokai -f console256 -g $argv ; end
-function d        ; du -h -d=1 $argv ; end
-function df       ; command df -h $argv ; end
 function digga    ; command dig +nocmd $argv[1] any +multiline +noall +answer; end
-function g        ; git $argv ; end
 function grep     ; command grep --color=auto $argv ; end
 function httpdump ; sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*" ; end
 function ip       ; curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g' ; end
 function localip  ; ipconfig getifaddr en0 ; end
 function lookbusy ; cat /dev/urandom | hexdump -C | grep --color "ca fe" ; end
-function mp       ; vim $argv ; end
 function rkt      ; racket -il xrepl $argv ; end
-function t        ; command tree -C $argv ; end
 function tmux     ; command tmux -2 $argv ; end
 function tunnel   ; ssh -D 8080 -C -N $argv ; end
 
+function ag -d 'fast search'
+  # -U --skip-vcs-ignores
+  #   Ignore VCS ignore files (.gitignore, .hgignore), but still use .ignore.
+  command ag --ignore=dist \
+    --ignore=.git \
+    --ignore=log \
+    --ignore=tags \
+    --ignore=tmp \
+    --ignore=vendor \
+    --ignore=node_modules \
+    --ignore=spec/vcr \
+    $argv;
+end
+
+# fzf
 function fd
   set -l FZFTEMPFILE $TMPDIR/fzffe.result.tmp
    find . -path '*/\.*' -prune -o -type d -print \
