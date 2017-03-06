@@ -42,7 +42,7 @@ alias netstat="netstat -ln -f inet"
 alias pdate='date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
 alias clj='lein repl'
 alias fish-iterm2-integration-update \
-  "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/iterm2.fish"
+  "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/fish.d/iterm2.fish"
 
 
 # php
