@@ -36,6 +36,7 @@ end
 
 source_script $FISHHOME/fish.d/00-env.fish
 source_script $FISHHOME/fish.d/20-local.fish
+source_script $FISHHOME/fish.d/30-fzf.fish
 source_script $FISHHOME/fish.d/80-credentials.fish
 source_script $FISHHOME/fish.d/learnosity.fish;
 
