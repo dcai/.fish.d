@@ -28,7 +28,8 @@ alias sed="$BINSED"
 alias tree="tree -C -N"
 alias df="df -h"
 alias du='du -sh'
-alias vim_upgrade='vim +PlugUpdate +qall'
+alias vim-upgrade='vim +PlugUpdate +qall'
+alias vim-debug='vim -V9/tmp/vim_debug.log'
 alias wget="aria2c"
 alias dl="aria2c"
 alias json-pretty-print='python -mjson.tool | pygmentize -l javascript'
@@ -41,6 +42,7 @@ alias iftop="iftop -P -N -b -B"
 alias netstat="netstat -ln -f inet"
 alias pdate='date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
 alias clj='lein repl'
+alias less='less -R'
 alias fish-iterm2-integration-update \
   "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/fish.d/iterm2.fish"
 
