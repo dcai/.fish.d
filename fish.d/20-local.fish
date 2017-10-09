@@ -22,8 +22,21 @@ alias ls="$BINLS -hF"
 # -h human readable
 # -G no group name
 # -p append "/" to directories
-alias ll="$BINLS -lhGp"
-alias lll="$BINLS -lhGpA"
+if type --quiet "exa"
+  alias ll="exa -l"
+  alias lll="exa -bghHliSa"
+else
+  alias ll="$BINLS -lhGp"
+  alias lll="$BINLS -lhGpA"
+end
+
+# brew install fd
+if command --search 'fd' >/dev/null do
+  alias fd="fd -aL"
+else
+  alias fd="find . -iname"
+end
+
 alias sed="$BINSED"
 alias tree="tree -C -N"
 alias df="df -h"
@@ -43,6 +56,7 @@ alias netstat="netstat -ln -f inet"
 alias pdate='date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
 alias clj='lein repl'
 alias less='less -R'
+alias rg='rg -i'
 alias fish-iterm2-integration-update \
   "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/fish.d/iterm2.fish"
 
