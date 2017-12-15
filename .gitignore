@@ -6,3 +6,4 @@ functions/*
 completions/*
 !completions/fisher.fish
 !completions/tmuxinator.fish
+credentials.fish

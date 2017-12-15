@@ -37,6 +37,7 @@ else
   alias fd="find . -iname"
 end
 
+alias ncdu="ncdu --confirm-quit"
 alias sed="$BINSED"
 alias tree="tree -C -N"
 alias df="df -h"
@@ -57,9 +58,8 @@ alias pdate='date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
 alias clj='lein repl'
 alias less='less -R'
 alias rg='rg -i'
-alias fish-iterm2-integration-update \
-  "curl -L 'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/fish.d/iterm2.fish"
-
+alias fish-iterm2-integration-update "curl -L \
+  'https://iterm2.com/misc/fish_startup.in' -o ~/.config/fish/dialect/iterm2.fish"
 
 # php
 alias php56='/usr/bin/php'
@@ -69,8 +69,13 @@ alias phpcs-psr2='phpcs --standard=PSR2'
 alias phpcs-moodle='phpcs --standard=~/src/moodle/local/codechecker/moodle'
 
 # emacs
-alias emacs="emacs -nw"
+#alias e="emacs -nw"
+alias e="emacs -nw -q -l ~/.emacs.d/init.el"
 alias ec='emacsclient -t'
+alias killemacs='emacsclient --eval "(kill-emacs)"'
+alias vim_upgrade='vim +PluginUpdate +qall'
+# pip install --user pygments
+alias json_pretty_print='python -mjson.tool | pygmentize -l javascript'
 
 # Navigation
 function ..    ; cd .. ; end
