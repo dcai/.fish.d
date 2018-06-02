@@ -44,7 +44,6 @@ alias df="df -h"
 alias du='du -sh'
 alias vim-upgrade='vim +PlugUpdate +qall'
 alias vim-debug='vim -V9/tmp/vim_debug.log'
-alias wget="aria2c"
 alias dl="aria2c"
 alias json-pretty-print='python -mjson.tool | pygmentize -l javascript'
 alias mv="mv -i"
