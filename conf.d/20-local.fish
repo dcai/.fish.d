@@ -102,14 +102,16 @@ function tunnel   ; ssh -D 8080 -C -N $argv ; end
 function ag -d 'fast search'
   # -U --skip-vcs-ignores
   #   Ignore VCS ignore files (.gitignore, .hgignore), but still use .ignore.
-  command ag --ignore=dist \
+  command ag \
+    --ignore-case \
+    --ignore=dist \
+    --ignore=build \
     --ignore=.git \
     --ignore=log \
     --ignore=tags \
     --ignore=tmp \
     --ignore=vendor \
     --ignore=node_modules \
-    --ignore=spec/vcr \
     $argv;
 end
 
