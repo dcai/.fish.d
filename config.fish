@@ -15,15 +15,17 @@ switch (uname)
 end
 
 add_paths \
-  /usr/local/share/npm/bin \
-  /usr/local/sbin \
+  /usr/lib/go-1.9/bin \
   /usr/local/bin \
-  ~/Dropbox/bin \
-  ~/.local/bin \
+  /usr/local/sbin \
+  /usr/local/share/npm/bin \
   ~/.cabal/bin \
-  ~/.fzf/bin \
-  ~/.npm-packages/bin \
   ~/.composer/vendor/bin \
+  ~/.fzf/bin \
+  ~/.gem/ruby/2.3.0/bin \
+  ~/.local/bin \
+  ~/.npm-packages/bin \
+  ~/Dropbox/bin \
   ~/Library/Python/2.7/bin \
   ~/Library/Python/3.5/bin \
   ~/Library/Python/3.6/bin \

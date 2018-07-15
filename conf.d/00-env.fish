@@ -2,6 +2,7 @@ set -gx SHELL                                  (which fish)
 set -gx EDITOR                                 vim
 set -gx LC_ALL                                 en_US.UTF-8
 set -gx GOPATH                                 "$HOME/.go"
+set -gx GOBIN                                  "$GOPATH/bin"
 set -gx XDG_CACHE_HOME                         "$HOME/.cache"
 set -gx XDG_CONFIG_HOME                        "$HOME/.config"
 set -gx XDG_DATA_HOME                          "$HOME/.local/share"
