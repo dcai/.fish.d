@@ -37,7 +37,6 @@ else
   alias fd="find . -iname"
 end
 
-alias ncdu="ncdu --confirm-quit"
 alias sed="$BINSED"
 alias tree="tree -C -N"
 alias df="df -h"
@@ -117,18 +116,18 @@ end
 
 function sss
   if test (count $argv) -eq 1
-    set DIR "$HTTPROOT/$argv[1]";
+    set DIR "$WORKSPACE_DIR/$argv[1]";
   else if test (count $argv) -eq 2
     set project $argv[2]
     if test $argv[1] = "api"
-      set DIR "$HOME/salt-developer/code/api/$project"
+      set DIR "$WORKSPACE_DIR/api/$project"
     else if test $argv[1] = "site"
-      set DIR "$HOME/salt-developer/code/site/$project"
+      set DIR "$WORKSPACE_DIR/site/$project"
     else
-      set DIR "$HOME/salt-developer/code/$argv[1]/$project"
+      set DIR "$WORKSPACE_DIR/$argv[1]/$project"
     end
   else
-    set DIR $HTTPROOT
+    set DIR $WORKSPACE_DIR
   end
 
   if test -d $DIR
@@ -145,7 +144,6 @@ function c
     | jq -r .[1][][0] \
     | gsed 's#</\?b>#\*#g'
 end
-
 
 function mvn-java-app
   mvn archetype:generate -DgroupId=org.dongsheng -DartifactId=$argv[1] \

@@ -6,7 +6,7 @@ set -gx GOBIN                                  "$GOPATH/bin"
 set -gx XDG_CACHE_HOME                         "$HOME/.cache"
 set -gx XDG_CONFIG_HOME                        "$HOME/.config"
 set -gx XDG_DATA_HOME                          "$HOME/.local/share"
-set -gx HTTPROOT                               "$HOME/src"
+set -gx WORKSPACE_DIR                          "$HOME/workspace"
 set -gx TIME_STYLE                             long-iso
 set -gx PAGER                                  less
 set -gx fish_prompt_pwd_dir_length             3
