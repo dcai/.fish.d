@@ -22,7 +22,6 @@ add_paths \
   ~/.cabal/bin \
   ~/.composer/vendor/bin \
   ~/.fzf/bin \
-  ~/.gem/ruby/2.3.0/bin \
   ~/.local/bin \
   ~/.npm-packages/bin \
   ~/Dropbox/bin \
@@ -32,7 +31,7 @@ add_paths \
   "$GOPATH/bin"
 
 if type --quiet "ruby"
-  set -l RUBYGEMHOME (ruby -rubygems -e 'puts Gem.user_dir')
+  set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
   add_one_path "$RUBYGEMHOME/bin"
 end
 
