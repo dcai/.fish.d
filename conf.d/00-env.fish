@@ -23,6 +23,8 @@ set -gx __fish_git_prompt_char_stashstate      '↩'
 set -gx __fish_git_prompt_char_upstream_ahead  '↑'
 set -gx __fish_git_prompt_char_upstream_behind '↓'
 
+set -gx WDP_CLI_THEME         "compact"
+set -gx WDP_CLI_NO_LOG_SOURCE 1
 function source_script
   test -f $argv[1]; and source $argv[1]
 end
