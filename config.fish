@@ -21,6 +21,7 @@ add_paths \
   /usr/local/share/npm/bin \
   ~/.cabal/bin \
   ~/.composer/vendor/bin \
+  ~/.config/composer/vendor/bin \
   ~/.fzf/bin \
   ~/.local/bin \
   ~/.npm-packages/bin \
