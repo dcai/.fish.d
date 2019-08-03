@@ -38,7 +38,6 @@ if type --quiet "ruby"
   add_one_path "$RUBYGEMHOME/bin"
 end
 
-
 set -U fish_path ~/.local/share/fisherman
 
 for file in $fish_path/conf.d/*.fish
@@ -47,3 +46,13 @@ end
 
 set fish_function_path $fish_path/functions $fish_function_path
 set fish_complete_path $fish_path/completions $fish_complete_path
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
