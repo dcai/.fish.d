@@ -3,6 +3,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 set -x FISHHOME "$HOME/.config/fish"
+set fish_greeting
 
 switch (uname)
 	case Linux
