@@ -31,6 +31,7 @@ add_paths \
   ~/Library/Python/3.5/bin \
   ~/Library/Python/3.6/bin \
   ~/Library/Python/3.7/bin \
+  /usr/local/opt/node@10/bin \
   "$GOPATH/bin"
 
 if type --quiet "ruby"
