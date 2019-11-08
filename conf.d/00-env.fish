@@ -11,6 +11,8 @@ set -gx TIME_STYLE                             long-iso
 set -gx PAGER                                  less
 set -gx fish_prompt_pwd_dir_length             3
 set -gx LESSOPEN                               '|pygmentize %s'
+# set -gx FZF_DEFAULT_COMMAND 'fd --type f'
+set -gx FZF_DEFAULT_COMMAND                    'rg --files'
 # fish git prompt
 set -gx __fish_git_prompt_showdirtystate       'yes'
 set -gx __fish_git_prompt_showstashstate       'yes'
