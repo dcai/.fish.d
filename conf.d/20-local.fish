@@ -16,6 +16,8 @@ else
   set BINSED "sed"
 end
 
+alias gc="gcloud"
+alias k="kubectl"
 alias ls="$BINLS -hF"
 # -A list all but not . and ..
 # -l long format

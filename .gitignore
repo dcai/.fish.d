@@ -4,4 +4,5 @@ fish_history.*
 completions/*
 !completions/fisher.fish
 !completions/tmuxinator.fish
+!completions/kubectl.fish
 credentials.fish
