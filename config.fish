@@ -10,7 +10,7 @@ switch (uname)
 		source_script $FISHHOME/dialect/linux.fish;
 	case Darwin
 		source_script $FISHHOME/dialect/macos.fish;
-		source_script $FISHHOME/dialect/iterm2.fish;
+		# source_script $FISHHOME/dialect/iterm2.fish;
 	#case FreeBSD NetBSD DragonFly
 	#case '*'
 end
@@ -57,3 +57,5 @@ set fish_complete_path $fish_path/completions $fish_complete_path
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dong.cai/google-cloud-sdk/path.fish.inc' ]; . '/Users/dong.cai/google-cloud-sdk/path.fish.inc'; end

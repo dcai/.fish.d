@@ -39,6 +39,8 @@ else
   alias fd="find . -iname"
 end
 
+alias k="kubectl"
+alias g="gcloud"
 alias sed="$BINSED"
 alias tree="tree -C -N"
 alias df="df -h"
