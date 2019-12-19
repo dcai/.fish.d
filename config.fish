@@ -25,11 +25,11 @@ add_paths \
   ~/.composer/vendor/bin \
   ~/.config/composer/vendor/bin \
   ~/.fzf/bin \
+  ~/.krew/bin \
   ~/.local/bin \
   ~/.npm-packages/bin \
   ~/Dropbox/bin \
   ~/Library/Python/2.7/bin \
-  ~/Library/Python/3.5/bin \
   ~/Library/Python/3.6/bin \
   ~/Library/Python/3.7/bin \
   /usr/local/opt/node@10/bin \
