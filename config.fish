@@ -16,6 +16,7 @@ switch (uname)
 end
 
 add_paths \
+  /snap/bin \
   /usr/lib/go-1.9/bin \
   /usr/local/bin \
   /usr/local/sbin \
