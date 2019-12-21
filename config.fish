@@ -19,8 +19,10 @@ add_paths \
   /snap/bin \
   /usr/lib/go-1.9/bin \
   /usr/local/bin \
+  /usr/local/opt/node@10/bin \
   /usr/local/sbin \
   /usr/local/share/npm/bin \
+  ~/.bin \
   ~/.cabal/bin \
   ~/.composer/vendor/bin \
   ~/.config/composer/vendor/bin \
@@ -32,7 +34,6 @@ add_paths \
   ~/Library/Python/2.7/bin \
   ~/Library/Python/3.6/bin \
   ~/Library/Python/3.7/bin \
-  /usr/local/opt/node@10/bin \
   "$GOPATH/bin"
 
 if type --quiet "ruby"
