@@ -22,6 +22,7 @@ add_paths \
   /usr/local/opt/node@10/bin \
   /usr/local/sbin \
   /usr/local/share/npm/bin \
+  ~/Dropbox/bin \
   ~/.bin \
   ~/.cabal/bin \
   ~/.composer/vendor/bin \
@@ -30,7 +31,6 @@ add_paths \
   ~/.krew/bin \
   ~/.local/bin \
   ~/.npm-packages/bin \
-  ~/Dropbox/bin \
   ~/Library/Python/2.7/bin \
   ~/Library/Python/3.6/bin \
   ~/Library/Python/3.7/bin \
