@@ -1,4 +1,4 @@
 INSTALLATION
 
 
-git clone git@github.com:dcai/.fish.d.git ~/.config/fish
+git clone https://github.com/dcai/.fish.d.git ~/.config/fish
