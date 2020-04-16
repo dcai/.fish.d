@@ -34,6 +34,7 @@ add_paths \
   ~/Library/Python/2.7/bin \
   ~/Library/Python/3.6/bin \
   ~/Library/Python/3.7/bin \
+  ~/Library/Python/3.8/bin \
   "$GOPATH/bin"
 
 if type --quiet "ruby"
@@ -49,15 +50,3 @@ end
 
 set fish_function_path $fish_path/functions $fish_function_path
 set fish_complete_path $fish_path/completions $fish_complete_path
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /Users/dcai/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dong.cai/google-cloud-sdk/path.fish.inc' ]; . '/Users/dong.cai/google-cloud-sdk/path.fish.inc'; end
