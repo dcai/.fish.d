@@ -1,6 +1,7 @@
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# ! conf.d/* are loaded before config.fish !
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# ! conf.d/* are loaded before config.fish
+# https://github.com/fish-shell/fish-shell/issues/3099
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 set -x FISHHOME "$HOME/.config/fish"
 set fish_greeting
@@ -15,7 +16,6 @@ case Darwin
 end
 
 add_paths \
-  /snap/bin \
   /usr/lib/go-1.9/bin \
   /usr/local/bin \
   /usr/local/opt/node@10/bin \
@@ -30,10 +30,6 @@ add_paths \
   ~/.krew/bin \
   ~/.local/bin \
   ~/.npm-packages/bin \
-  ~/Library/Python/2.7/bin \
-  ~/Library/Python/3.6/bin \
-  ~/Library/Python/3.7/bin \
-  ~/Library/Python/3.8/bin \
   "$GOPATH/bin"
 
 if type --quiet "ruby"
@@ -42,10 +38,6 @@ if type --quiet "ruby"
 end
 
 set -U fish_path ~/.local/share/fisherman
-
-for file in $fish_path/conf.d/*.fish
-  builtin source $file 2> /dev/null
-end
 
 set fish_function_path $fish_path/functions $fish_function_path
 set fish_complete_path $fish_path/completions $fish_complete_path
