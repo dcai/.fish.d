@@ -6,13 +6,12 @@ set -x FISHHOME "$HOME/.config/fish"
 set fish_greeting
 
 switch (uname)
-	case Linux
-		source_script $FISHHOME/dialect/linux.fish;
-	case Darwin
-		source_script $FISHHOME/dialect/macos.fish;
-		# source_script $FISHHOME/dialect/iterm2.fish;
-	#case FreeBSD NetBSD DragonFly
-	#case '*'
+case Linux
+  source_script $FISHHOME/dialect/linux.fish;
+case Darwin
+  source_script $FISHHOME/dialect/macos.fish;
+#case FreeBSD NetBSD DragonFly
+#case '*'
 end
 
 add_paths \
