@@ -1,29 +1,16 @@
-# set -gx SHELL                                  (which fish)
-set -gx EDITOR                                 vim
-set -gx LC_ALL                                 en_US.UTF-8
-set -gx GOPATH                                 "$HOME/.go"
-set -gx GOBIN                                  "$GOPATH/bin"
-set -gx XDG_CACHE_HOME                         "$HOME/.cache"
-set -gx XDG_CONFIG_HOME                        "$HOME/.config"
-set -gx XDG_DATA_HOME                          "$HOME/.local/share"
-set -gx WORKSPACE_DIR                          "$HOME/workspace"
-set -gx TIME_STYLE                             long-iso
-set -gx PAGER                                  less
-set -gx fish_prompt_pwd_dir_length             3
-set -gx LESSOPEN                               '|pygmentize %s'
-# set -gx FZF_DEFAULT_COMMAND 'fd --type f'
-set -gx FZF_DEFAULT_COMMAND                    'rg --files'
-# fish git prompt
-set -gx __fish_git_prompt_showdirtystate       'yes'
-set -gx __fish_git_prompt_showstashstate       'yes'
-set -gx __fish_git_prompt_showupstream         'yes'
-set -gx __fish_git_prompt_color_branch         yellow
-# Status Chars
-set -gx __fish_git_prompt_char_dirtystate      '⚡'
-set -gx __fish_git_prompt_char_stagedstate     '→'
-set -gx __fish_git_prompt_char_stashstate      '↩'
-set -gx __fish_git_prompt_char_upstream_ahead  '↑'
-set -gx __fish_git_prompt_char_upstream_behind '↓'
+set -gx fish_prompt_pwd_dir_length 3
+set -gx EDITOR                     vim
+set -gx LC_ALL                     en_US.UTF-8
+set -gx GOPATH                     "$HOME/.go"
+set -gx GOBIN                      "$GOPATH/bin"
+set -gx XDG_CACHE_HOME             "$HOME/.cache"
+set -gx XDG_CONFIG_HOME            "$HOME/.config"
+set -gx XDG_DATA_HOME              "$HOME/.local/share"
+set -gx TIME_STYLE                 long-iso
+set -gx PAGER                      less
+set -gx LESSOPEN                   '|pygmentize %s'
+# set -gx FZF_DEFAULT_COMMAND        'fd --type f'
+set -gx FZF_DEFAULT_COMMAND        'rg --files'
 
 function source_script
   test -f $argv[1]; and source $argv[1]

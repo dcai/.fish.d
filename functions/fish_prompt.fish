@@ -1,11 +1,15 @@
-function fish_prompt
-  # test $SSH_TTY
-  # and printf (set_color red)$USER(set_color brwhite)'@'(set_color yellow)(prompt_hostname)' '
-  switch "$USER"
+function fish_prompt --description 'Write out the prompt'
+
+    switch $USER
+
     case root
-      echo -n (set_color red)(prompt_pwd) "# "
+      set -g __fish_prompt_symbol ' # '
+
     case '*'
-      echo -n (set_color cyan)(prompt_pwd) (set_color green)'> '
-  end
-  set_color normal
+      set -g __fish_prompt_symbol ' > '
+    end
+
+    echo -n (set_color green)(prompt_pwd)(set_color normal)"$__fish_prompt_symbol"
+
+    set_color normal
 end
