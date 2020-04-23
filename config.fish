@@ -41,3 +41,6 @@ set -U fish_path ~/.local/share/fisherman
 
 set fish_function_path $fish_path/functions $fish_function_path
 set fish_complete_path $fish_path/completions $fish_complete_path
+
+
+[ -f $HOME/.asdf/asdf.fish ]; and . $HOME/.asdf/asdf.fish
