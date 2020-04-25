@@ -1,3 +1,5 @@
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+
 add_paths \
   ~/Library/Python/2.7/bin \
   ~/Library/Python/3.6/bin \
