@@ -33,9 +33,7 @@ else
 end
 
 # brew install fd
-if command --search 'fd' >/dev/null do
-  alias fd="fd -aL"
-else
+if ! command --search 'fd' >/dev/null do
   alias fd="find . -iname"
 end
 
