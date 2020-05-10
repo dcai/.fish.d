@@ -16,26 +16,24 @@ case Darwin
 end
 
 add_paths \
-  /usr/lib/go-1.9/bin \
   /usr/local/bin \
-  /usr/local/opt/node@10/bin \
   /usr/local/sbin \
   /usr/local/share/npm/bin \
   ~/Dropbox/bin \
   ~/.bin \
   ~/.cabal/bin \
-  ~/.composer/vendor/bin \
   ~/.config/composer/vendor/bin \
   ~/.fzf/bin \
+  ~/.gem/ruby/2.7.0/bin \
   ~/.krew/bin \
   ~/.local/bin \
   ~/.npm-packages/bin \
   "$GOPATH/bin"
 
-if type --quiet "ruby"
-  set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
-  add_one_path "$RUBYGEMHOME/bin"
-end
+# if type --quiet "ruby"
+#   set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
+#   add_one_path "$RUBYGEMHOME/bin"
+# end
 
 set -U fish_path ~/.local/share/fisherman
 
