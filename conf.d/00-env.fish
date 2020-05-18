@@ -10,7 +10,7 @@ set -gx TIME_STYLE                 long-iso
 set -gx PAGER                      less
 set -gx LESSOPEN                   '|pygmentize %s'
 # set -gx FZF_DEFAULT_COMMAND        'fd --type f'
-# set -gx FZF_DEFAULT_COMMAND        'rg --files'
+set -gx FZF_DEFAULT_COMMAND        'rg --files --color never  --hidden'
 set -gx RIPGREP_CONFIG_PATH        "$HOME/.rgrc"
 
 function source_script
