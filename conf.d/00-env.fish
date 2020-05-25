@@ -11,7 +11,7 @@ set -gx PAGER                      less
 set -gx LESSOPEN                   '|pygmentize %s'
 # set -gx FZF_DEFAULT_COMMAND        'fd --type f'
 set -gx FZF_DEFAULT_COMMAND        'rg --files --color never --hidden --column'
-set -gx RIPGREP_CONFIG_PATH        "$HOME/.rgrc"
+set -gx RIPGREP_CONFIG_PATH        "$HOME/.ripgreprc"
 
 function source_script
   test -f $argv[1]; and source $argv[1]
