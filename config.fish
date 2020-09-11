@@ -27,6 +27,7 @@ add_paths \
   ~/.gem/ruby/2.7.0/bin \
   ~/.krew/bin \
   ~/.local/bin \
+  ~/.poetry/bin \
   ~/.npm-packages/bin \
   "$GOPATH/bin"
 
