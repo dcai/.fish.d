@@ -24,6 +24,7 @@ add_paths \
   ~/.cabal/bin \
   ~/.config/composer/vendor/bin \
   ~/.fzf/bin \
+  ~/.gem/ruby/2.6.0/bin \
   ~/.gem/ruby/2.7.0/bin \
   ~/.krew/bin \
   ~/.local/bin \
