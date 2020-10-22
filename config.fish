@@ -15,28 +15,6 @@ case Darwin
 #case '*'
 end
 
-add_paths \
-  /usr/local/bin \
-  /usr/local/sbin \
-  /usr/local/share/npm/bin \
-  ~/Dropbox/bin \
-  ~/.bin \
-  ~/.cabal/bin \
-  ~/.config/composer/vendor/bin \
-  ~/.fzf/bin \
-  ~/.gem/ruby/2.6.0/bin \
-  ~/.gem/ruby/2.7.0/bin \
-  ~/.krew/bin \
-  ~/.local/bin \
-  ~/.poetry/bin \
-  ~/.npm-packages/bin \
-  "$GOPATH/bin"
-
-# if type --quiet "ruby"
-#   set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
-#   add_one_path "$RUBYGEMHOME/bin"
-# end
-
 set -U fish_path ~/.local/share/fisherman
 
 set fish_function_path $fish_path/functions $fish_function_path
