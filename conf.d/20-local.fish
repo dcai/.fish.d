@@ -1,17 +1,17 @@
 if type --quiet "gdate"
-  set BINDATE "/usr/local/bin/gdate"
+  set BINDATE "/opt/homebrew/bin/gdate"
 else
   set BINDATE "/bin/date"
 end
 
 if type --quiet "gls"
-  set BINLS "/usr/local/bin/gls --color --time-style long-iso"
+  set BINLS "/opt/homebrew/bin/gls --color --time-style long-iso"
 else
   set BINLS "/bin/ls"
 end
 
 if type --quiet "gsed"
-  set BINSED "/usr/local/bin/gsed"
+  set BINSED "/opt/homebrew/bin/gsed"
 else
   set BINSED "sed"
 end
