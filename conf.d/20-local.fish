@@ -1,16 +1,16 @@
-if type --quiet "gdate"
+if type -q "gdate"
   set BINDATE (which gdate)
 else
   set BINDATE "/bin/date"
 end
 
-if type --quiet "gls"
+if type -q "gls"
   set BINLS (which gls)" --color --time-style long-iso"
 else
   set BINLS "/bin/ls"
 end
 
-if type --quiet "gsed"
+if type -q "gsed"
   set BINSED (which gsed)
 else
   set BINSED "sed"
@@ -24,7 +24,7 @@ alias ls="$BINLS -hF"
 # -h human readable
 # -G no group name
 # -p append "/" to directories
-if type --quiet "exa"
+if type -q "exa"
   alias ll="exa -l"
   alias lll="exa -bghHliSa"
 else

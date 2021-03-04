@@ -61,7 +61,7 @@ set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
 set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
 set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
 set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
-# if type --quiet "ruby"
+# if type -q "ruby"
 #   set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
 #   add_one_path "$RUBYGEMHOME/bin"
 # end

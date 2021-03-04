@@ -1,5 +1,5 @@
 function fish_greeting --description 'Greeting'
-  if type --quiet "fortune"
+  if type -q "fortune"
     fortune -a
   end
 end
