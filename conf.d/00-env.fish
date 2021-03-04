@@ -41,6 +41,20 @@ add_paths \
   /usr/local/bin \
   /usr/local/sbin \
   /usr/local/share/npm/bin \
+  "$GOPATH/bin"
+
+if [ (arch) = "arm64" ]
+  if test -f /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv);
+  end
+else
+  if test -f /usr/local/bin/brew
+    eval (/usr/local/bin/brew shellenv)
+  end
+end
+
+# add executes in home after brew binaries
+add_paths \
   ~/Dropbox/bin \
   ~/.bin \
   ~/.cabal/bin \
@@ -51,20 +65,7 @@ add_paths \
   ~/.krew/bin \
   ~/.local/bin \
   ~/.poetry/bin \
-  ~/.npm-packages/bin \
-  "$GOPATH/bin"
-
-
-set -l ARCH (arch)
-if [ $ARCH = "arm64" ]
-  if test -f /opt/homebrew/bin/brew
-    eval (/opt/homebrew/bin/brew shellenv);
-  end
-else
-  if test -f /usr/local/bin/brew
-    eval (/usr/local/bin/brew shellenv)
-  end
-end
+  ~/.npm-packages/bin
 
 # if type -q "ruby"
 #   set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
