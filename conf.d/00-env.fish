@@ -41,8 +41,6 @@ add_paths \
   /usr/local/bin \
   /usr/local/sbin \
   /usr/local/share/npm/bin \
-  /opt/homebrew/bin \
-  /opt/homebrew/sbin \
   ~/Dropbox/bin \
   ~/.bin \
   ~/.cabal/bin \
@@ -56,11 +54,18 @@ add_paths \
   ~/.npm-packages/bin \
   "$GOPATH/bin"
 
-set -gx HOMEBREW_PREFIX "/opt/homebrew";
-set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
-set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
-set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
-set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
+
+set -l ARCH (arch)
+if [ $ARCH = "arm64" ]
+  if test -f /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv);
+  end
+else
+  if test -f /usr/local/bin/brew
+    eval (/usr/local/bin/brew shellenv)
+  end
+end
+
 # if type -q "ruby"
 #   set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
 #   add_one_path "$RUBYGEMHOME/bin"
