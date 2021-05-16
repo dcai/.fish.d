@@ -34,7 +34,11 @@ end
 
 # brew install fd
 if ! command --search 'fd' >/dev/null do
-  alias fd="find . -iname"
+  if ! command --search 'fdfind' >/dev/null do
+    alias fd="find . -iname"
+  else
+    alias fd="fdfind"
+  end
 end
 
 alias k="kubectl"
