@@ -8,7 +8,7 @@ set -gx XDG_DATA_HOME              "$HOME/.local/share"
 set -gx TIME_STYLE                 long-iso
 set -gx PAGER                      less
 set -gx RIPGREP_CONFIG_PATH        "$HOME/.ripgreprc"
-set -gx fish_prompt_pwd_dir_length 3
+set -gx fish_prompt_pwd_dir_length 5
 # set -gx LESSOPEN                   '|pygmentize %s'
 # set -gx FZF_DEFAULT_COMMAND        'rg --files --color never --hidden --column'
 
@@ -40,20 +40,7 @@ add_paths \
   /usr/local/bin \
   /usr/local/sbin \
   /usr/local/share/npm/bin \
-  "$GOPATH/bin"
-
-if [ (arch) = "arm64" ]
-  if test -f /opt/homebrew/bin/brew
-    eval (/opt/homebrew/bin/brew shellenv);
-  end
-else
-  if test -f /usr/local/bin/brew
-    eval (/usr/local/bin/brew shellenv)
-  end
-end
-
-# add executes in home after brew binaries
-add_paths \
+  "$GOPATH/bin" \
   ~/Dropbox/bin \
   ~/.bin \
   ~/.cabal/bin \
@@ -61,9 +48,9 @@ add_paths \
   ~/.fzf/bin \
   ~/.gem/ruby/2.6.0/bin \
   ~/.gem/ruby/2.7.0/bin \
+  ~/.poetry/bin \
   ~/.krew/bin \
   ~/.local/bin \
-  ~/.poetry/bin \
   ~/.npm-packages/bin
 
 # if type -q "ruby"
