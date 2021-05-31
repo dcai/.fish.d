@@ -35,8 +35,13 @@ if ! command --search 'fd' >/dev/null do
   if ! command --search 'fdfind' >/dev/null do
     alias fd="find . -iname"
   else
+    # findfd is installed
+    set -gx FZF_DEFAULT_COMMAND 'fdfind --type f'
     alias fd="fdfind"
   end
+else
+  # fd is isntalled
+  set -gx FZF_DEFAULT_COMMAND 'fd --type f'
 end
 
 alias k="kubectl"
