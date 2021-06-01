@@ -1,4 +1,5 @@
 set -gx EDITOR vim
+set -gx FISHHOME "$HOME/.config/fish"
 set -gx GOBIN "$GOPATH/bin"
 set -gx GOPATH "$HOME/.go"
 set -gx LC_ALL en_US.UTF-8
