@@ -1,4 +1,5 @@
 if status --is-interactive
+    abbr -a -g mongod 'mongod --config /opt/homebrew/etc/mongod.conf'
     abbr -a -g dfc 'watch -c -n 30 dfc -c always'
     abbr -a -g ld 'tree --dirsfirst -aFCNL 1'
     abbr -a -g lld 'tree --dirsfirst -ChFupDaLg 1'
