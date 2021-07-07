@@ -9,7 +9,7 @@ set -gx TIME_STYLE long-iso
 set -gx XDG_CACHE_HOME "$HOME/.cache"
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_DATA_HOME "$HOME/.local/share"
-# set -gx fish_prompt_pwd_dir_length 5
+set -gx fish_prompt_pwd_dir_length 0
 # set -gx LESSOPEN '|pygmentize %s'
 # set -gx FZF_DEFAULT_COMMAND 'rg --files --color never --hidden --column'
 
