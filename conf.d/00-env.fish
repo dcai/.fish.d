@@ -58,3 +58,7 @@ add_paths \
 #     set -l RUBYGEMHOME (ruby -r rubygems -e "puts Gem.user_dir")
 #     add_one_path "$RUBYGEMHOME/bin"
 # end
+
+if type -q opam
+    eval (opam env)
+end
