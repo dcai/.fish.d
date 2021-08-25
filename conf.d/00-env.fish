@@ -59,6 +59,11 @@ add_paths \
 #     add_one_path "$RUBYGEMHOME/bin"
 # end
 
-if type -q opam
-    eval (opam env)
+# if type -q opam
+#     eval (opam env)
+# end
+
+# opam configuration
+if [ -f "$HOME/.opam/opam-init/init.fish" ]
+    source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 end
