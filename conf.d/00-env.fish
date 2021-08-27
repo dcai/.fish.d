@@ -53,6 +53,7 @@ add_paths \
     ~/.poetry/bin \
     ~/.krew/bin \
     ~/.local/bin \
+    ~/.dotnet/tools \
     ~/.npm-packages/bin
 
 # if type -q ruby
