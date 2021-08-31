@@ -1,4 +1,5 @@
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
+set -gx HOMEBREW_CURLRC 1
 
 if [ (arch) = arm64 ]
     if test -f /opt/homebrew/bin/brew
