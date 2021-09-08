@@ -12,6 +12,7 @@ else
 end
 
 add_paths \
+    /opt/homebrew/bin \
     /usr/local/opt/mysql-client/bin \
     /usr/local/opt/openjdk/bin \
     /opt/homebrew/opt/mysql-client/bin \
