@@ -11,7 +11,6 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_DATA_HOME "$HOME/.local/share"
 set -gx fish_prompt_pwd_dir_length 0
 set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
-set -gx NODE_TLS_REJECT_UNAUTHORIZED 0
 set -gx HOMEBREW_NO_ANALYTICS 1
 # set -gx LESSOPEN '|pygmentize %s'
 # set -gx FZF_DEFAULT_COMMAND 'rg --files --color never --hidden --column'
