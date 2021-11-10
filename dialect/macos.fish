@@ -1,6 +1,10 @@
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx HOMEBREW_CURLRC 1
 
+set VIMSRV "$VIM_SERVER"
+test -z "$VIMSRV"; and set VIMSRV vimsrv
+alias vi="mvim --servername $VIMSRV --remote-silent"
+
 if [ (arch) = arm64 ]
     if test -f /opt/homebrew/bin/brew
         eval (/opt/homebrew/bin/brew shellenv)

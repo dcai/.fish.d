@@ -63,10 +63,6 @@ alias pdate='date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"'
 alias clj='lein repl'
 alias less='less -R'
 
-set VIMSRV "$VIM_SERVER"
-test -z "$VIMSRV"; and set VIMSRV vimsrv
-alias vi="mvim --servername $VIMSRV --remote-silent "
-
 # emacs
 #alias e="emacs -nw"
 alias e="emacs -nw -q -l ~/.emacs.d/init.el"
