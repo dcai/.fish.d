@@ -3,7 +3,7 @@ set -gx HOMEBREW_CURLRC 1
 
 set VIMSRV "$VIM_SERVER"
 test -z "$VIMSRV"; and set VIMSRV vimsrv
-alias vi="mvim --servername $VIMSRV --remote-silent"
+# alias vi="mvim --servername $VIMSRV --remote-silent"
 
 if [ (arch) = arm64 ]
     if test -f /opt/homebrew/bin/brew
