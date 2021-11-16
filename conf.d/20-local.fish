@@ -93,7 +93,7 @@ end
 function httpdump
     sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"
 end
-function ip
+function mypublicip
     curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'
 end
 function localip
