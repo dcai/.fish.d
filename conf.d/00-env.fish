@@ -39,9 +39,9 @@ function add_paths --description 'Add a list of paths to $PATH'
     end
 end
 
-function echoi --description "echo in interactive mode only"
+function iprintf --description "echo in interactive mode only"
     if status --is-interactive
-        echo $argv[1]
+        printf $argv[1]
     end
 end
 
