@@ -11,5 +11,5 @@ if status --is-interactive
     abbr -a -g wget "curl -C - -O"
     abbr -a -g nodemon "NODE_ENV=local npx nodemon -r dotenv/config"
     abbr -a -g behat-init "php admin/tool/behat/cli/init.php -j=1 --axe -a=classic"
-    abbr -a -g behat-run 'ROOT="$HOME/moodles/stable_master" vendor/bin/behat --format="moodle_progress" --out="std" --format="progress" --out="$ROOT/extra/behat/progress.txt" --format="pretty" --out="$ROOT/extra/behat/progress_pretty.txt" --config="$ROOT/moodledata_behat/behatrun/behat/behat.yml" --profile=headlessfirefox --tags "@accessibility"'
+    abbr -a -g mp3-dl 'youtube-dl --extract-audio --audio-format mp3 '
 end
