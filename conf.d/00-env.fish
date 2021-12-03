@@ -14,6 +14,7 @@ set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 set -gx HOMEBREW_NO_ANALYTICS 1
 # set -gx LESSOPEN '|pygmentize %s'
 # set -gx FZF_DEFAULT_COMMAND 'rg --files --color never --hidden --column'
+set -gx FZF_DEFAULT_OPTS '--height 60% --layout=reverse --bind ctrl-b:preview-half-page-up,ctrl-f:preview-half-page-down'
 
 function source_script
     test -f $argv[1]; and source $argv[1]
