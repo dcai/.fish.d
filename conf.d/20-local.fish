@@ -44,7 +44,7 @@ else
     set -gx FZF_DEFAULT_COMMAND 'fd --type f'
 end
 
-alias k="kubectl"
+alias ktl="kubectl"
 alias g="gcloud"
 alias sed="$BINSED"
 alias tree="tree -C -N"
